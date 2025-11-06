@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Juego en curso</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Bienvenido, <span id="jugadorNombre"></span> 👋</h2>
+        <h3>Puntaje: <span id="score">0</span> 🧠</h3>
+
+        <div id="preguntaContainer">
+            <p id="pregunta">¿Cuál es el proveedor de nube más usado del mundo?</p>
+            <button class="opcion">Google Cloud</button>
+            <button class="opcion">Azure</button>
+            <button class="opcion correcto">AWS</button>
+            <button class="opcion">IBM Cloud</button>
+        </div>
+        <button id="siguiente">➡️ Siguiente</button>
+        <button id="terminar">🚪 Terminar</button>
+    </div>
+    <!-- Primero la API, luego el juego -->
+    <script src="scripts/score-api.js"></script>
+    <script src="scripts/juego.js"></script>
+    <script src="scripts/preguntas.js"></script>
+
+
+</body>
+
+</html>

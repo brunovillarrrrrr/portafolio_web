@@ -1,0 +1,82 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo degradado oscuro profesional -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1f3a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f1729;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cloudGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF9900;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFC300;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="800" height="600" fill="url(#bgGradient)"/>
+
+  <!-- Elementos decorativos de fondo (partículas) -->
+  <circle cx="100" cy="100" r="2" fill="#22d3ee" opacity="0.3"/>
+  <circle cx="700" cy="150" r="3" fill="#22d3ee" opacity="0.4"/>
+  <circle cx="200" cy="500" r="2" fill="#22d3ee" opacity="0.3"/>
+  <circle cx="650" cy="450" r="2" fill="#22d3ee" opacity="0.5"/>
+  <circle cx="150" cy="300" r="3" fill="#22d3ee" opacity="0.3"/>
+
+  <!-- Nube AWS Principal -->
+  <g transform="translate(250, 150)">
+    <path d="M 80 80 Q 60 40, 100 40 Q 100 20, 120 20 Q 140 20, 140 40 Q 180 40, 160 80 Z" fill="url(#cloudGradient)" opacity="0.9"/>
+    <path d="M 90 85 Q 80 75, 90 70 L 150 70 Q 160 75, 150 85 Z" fill="#FF9900" opacity="0.7"/>
+  </g>
+
+  <!-- Logo AWS estilizado -->
+  <g transform="translate(320, 180)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#FF9900">AWS</text>
+  </g>
+
+  <!-- Título del juego -->
+  <g transform="translate(400, 280)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="#22d3ee" text-anchor="middle">☁️ Cloud Quest</text>
+  </g>
+
+  <!-- Subtítulo -->
+  <g transform="translate(400, 330)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Juego Interactivo de Aprendizaje AWS</text>
+  </g>
+
+  <!-- Elementos de juego (iconos de servicios) -->
+  <g transform="translate(150, 400)">
+    <!-- S3 -->
+    <rect x="0" y="0" width="80" height="60" rx="8" fill="#1e293b" stroke="#22d3ee" stroke-width="2"/>
+    <text x="40" y="38" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#22d3ee" text-anchor="middle">S3</text>
+  </g>
+
+  <g transform="translate(260, 400)">
+    <!-- Lambda -->
+    <rect x="0" y="0" width="80" height="60" rx="8" fill="#1e293b" stroke="#22d3ee" stroke-width="2"/>
+    <text x="40" y="38" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#22d3ee" text-anchor="middle">λ</text>
+  </g>
+
+  <g transform="translate(370, 400)">
+    <!-- EC2 -->
+    <rect x="0" y="0" width="80" height="60" rx="8" fill="#1e293b" stroke="#22d3ee" stroke-width="2"/>
+    <text x="40" y="38" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#22d3ee" text-anchor="middle">EC2</text>
+  </g>
+
+  <g transform="translate(480, 400)">
+    <!-- RDS -->
+    <rect x="0" y="0" width="80" height="60" rx="8" fill="#1e293b" stroke="#22d3ee" stroke-width="2"/>
+    <text x="40" y="38" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#22d3ee" text-anchor="middle">RDS</text>
+  </g>
+
+  <g transform="translate(590, 400)">
+    <!-- CloudFront -->
+    <rect x="0" y="0" width="80" height="60" rx="8" fill="#1e293b" stroke="#22d3ee" stroke-width="2"/>
+    <text x="40" y="35" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#22d3ee" text-anchor="middle">Cloud</text>
+    <text x="40" y="50" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#22d3ee" text-anchor="middle">Front</text>
+  </g>
+
+  <!-- Botón de jugar -->
+  <g transform="translate(400, 510)">
+    <rect x="-70" y="-20" width="140" height="45" rx="8" fill="#22d3ee" opacity="0.2" stroke="#22d3ee" stroke-width="2"/>
+    <text x="0" y="10" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#22d3ee" text-anchor="middle">🎮 Jugar</text>
+  </g>
+</svg>

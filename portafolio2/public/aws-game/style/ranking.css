@@ -1,0 +1,433 @@
+/* Estilos Base */
+* {
+    box-sizing: border-box;
+    font-family: 'Amazon Ember', 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, #1a2a3a 0%, #232f3e 100%);
+    color: #f0f6fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.ranking-container {
+    background: rgba(31, 31, 31, 0.9);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+    width: 100%;
+    max-width: 500px;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 153, 0, 0.1);
+    animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    color: #ff9900;
+    font-size: 2.2rem;
+    margin: 0 0 7px 0;
+    letter-spacing: 1px;
+    text-shadow: 0 3px 16px rgba(0, 0, 0, 0.6);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.trophy {
+    font-size: 2.1rem;
+    vertical-align: -3px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.sub {
+    text-align: center;
+    color: rgba(255, 248, 220, 0.73);
+    margin-bottom: 1.5rem;
+    font-size: 1.08rem;
+    letter-spacing: 0.2px;
+}
+
+#buscador {
+    width: 100%;
+    max-width: 340px;
+    background: rgba(41, 41, 41, 0.8);
+    border: none;
+    outline: none;
+    color: #ffe6b8;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 1.07rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 9px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 153, 0, 0.1);
+}
+
+#buscador:focus {
+    background: rgba(26, 26, 26, 0.9);
+    box-shadow: 0 2px 18px rgba(255, 153, 0, 0.4);
+    border-color: rgba(255, 153, 0, 0.3);
+    transform: translateY(-1px);
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: rgba(34, 34, 34, 0.7);
+    box-shadow: 0 6px 32px rgba(0, 0, 0, 0.4);
+    border-radius: 14px;
+    overflow: hidden;
+    min-width: 340px;
+    max-width: 95vw;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 153, 0, 0.1);
+    animation: tableFadeIn 0.8s ease-out;
+}
+
+@keyframes tableFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+th,
+td {
+    padding: 14px 24px;
+    font-size: 1.12rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.6);
+    transition: all 0.2s ease;
+}
+
+th {
+    background: linear-gradient(to right, #ff9900ee, #ffaa33ee);
+    color: #111;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    font-size: 1.08rem;
+    text-shadow: 0 1px 7px rgba(255, 255, 255, 0.4);
+    position: sticky;
+    top: 0;
+}
+
+tbody tr:nth-child(1) td {
+    background: rgba(255, 248, 220, 0.2);
+    color: #ffdd57;
+    font-weight: bold;
+    font-size: 1.23rem;
+    text-shadow: 0 2px 8px rgba(255, 239, 192, 0.2);
+    border-top: 2px solid rgba(255, 235, 59, 0.6);
+    animation: goldPulse 2s infinite;
+}
+
+@keyframes goldPulse {
+    0% {
+        background-color: rgba(255, 248, 220, 0.2);
+    }
+
+    50% {
+        background-color: rgba(255, 248, 220, 0.4);
+    }
+
+    100% {
+        background-color: rgba(255, 248, 220, 0.2);
+    }
+}
+
+tbody tr:nth-child(2) td {
+    background: rgba(255, 179, 0, 0.15);
+    color: #fff8e1;
+    font-weight: bold;
+    animation: silverPulse 3s infinite;
+}
+
+tbody tr:nth-child(3) td {
+    background: rgba(205, 127, 50, 0.15);
+    color: #fff8e1;
+    font-weight: bold;
+    animation: bronzePulse 3.5s infinite;
+}
+
+@keyframes silverPulse {
+    0% {
+        background-color: rgba(255, 179, 0, 0.15);
+    }
+
+    50% {
+        background-color: rgba(255, 179, 0, 0.25);
+    }
+
+    100% {
+        background-color: rgba(255, 179, 0, 0.15);
+    }
+}
+
+@keyframes bronzePulse {
+    0% {
+        background-color: rgba(205, 127, 50, 0.15);
+    }
+
+    50% {
+        background-color: rgba(205, 127, 50, 0.25);
+    }
+
+    100% {
+        background-color: rgba(205, 127, 50, 0.15);
+    }
+}
+
+tbody tr:hover {
+    background: rgba(40, 46, 53, 0.9);
+    transform: scale(1.01);
+}
+
+/* Botón de volver al inicio */
+.volver {
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.volver a {
+    display: inline-block;
+    background: linear-gradient(to right, #ff9900, #ffaa33);
+    color: #232526;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.09rem;
+    border-radius: 8px;
+    padding: 12px 30px;
+    box-shadow: 0 3px 16px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: none;
+}
+
+.volver a:hover {
+    background: linear-gradient(to right, #ffaa33, #ffbb66);
+    color: #222;
+    box-shadow: 0 6px 20px rgba(255, 153, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+.volver a:active {
+    transform: translateY(0);
+}
+
+.volver a::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(to bottom right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.15) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    transform: rotate(30deg);
+    transition: all 0.5s;
+}
+
+.volver a:hover::after {
+    left: 100%;
+    top: 100%;
+}
+
+@media (max-width: 500px) {
+    .ranking-container {
+        padding: 1.5rem;
+        margin: 1rem;
+        max-width: 97vw;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .trophy {
+        font-size: 1.6rem;
+    }
+
+    th,
+    td {
+        padding: 10px 12px;
+        font-size: 0.95rem;
+    }
+
+    #buscador {
+        font-size: 0.97rem;
+        padding: 10px 14px;
+    }
+
+    .volver a {
+        padding: 10px 24px;
+        font-size: 1rem;
+    }
+}
+/* Responsive para pantallas medianas (tablets) */
+@media (max-width: 768px) {
+    .ranking-container {
+        padding: 2rem 1.5rem;
+        margin: 1.5rem;
+        max-width: 90vw;
+    }
+
+    h1 {
+        font-size: 1.9rem;
+    }
+
+    .trophy {
+        font-size: 1.8rem;
+    }
+
+    #buscador {
+        max-width: 100%;
+        padding: 11px 14px;
+    }
+
+    table {
+        min-width: 100%;
+    }
+
+    th,
+    td {
+        padding: 12px 18px;
+        font-size: 1.05rem;
+    }
+
+    tbody tr:nth-child(1) td {
+        font-size: 1.15rem;
+    }
+}
+
+/* Responsive para móviles grandes */
+@media (max-width: 600px) {
+    .ranking-container {
+        padding: 1.8rem 1.2rem;
+        margin: 1rem;
+        border-radius: 14px;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .sub {
+        font-size: 1rem;
+        margin-bottom: 1.2rem;
+    }
+
+    #buscador {
+        font-size: 1rem;
+        margin-bottom: 1.2rem;
+    }
+
+    th,
+    td {
+        padding: 10px 14px;
+        font-size: 0.98rem;
+    }
+
+    .volver a {
+        padding: 10px 24px;
+        font-size: 1rem;
+    }
+}
+
+/* Responsive para móviles pequeños */
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+
+    .ranking-container {
+        padding: 1.5rem 1rem;
+        margin: 0.5rem;
+        border-radius: 12px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        gap: 8px;
+    }
+
+    .trophy {
+        font-size: 1.5rem;
+    }
+
+    .sub {
+        font-size: 0.95rem;
+    }
+
+    #buscador {
+        padding: 10px 12px;
+        font-size: 0.95rem;
+    }
+
+    th,
+    td {
+        padding: 8px 10px;
+        font-size: 0.92rem;
+    }
+
+    tbody tr:nth-child(1) td {
+        font-size: 1.05rem;
+    }
+
+    .volver a {
+        padding: 9px 20px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas */
+@media (max-width: 360px) {
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    th,
+    td {
+        padding: 7px 8px;
+        font-size: 0.88rem;
+    }
+
+    #buscador {
+        padding: 8px 10px;
+    }
+}

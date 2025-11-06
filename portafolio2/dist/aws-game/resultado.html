@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏆 Ranking de Jugadores | Cloud Game</title>
+    <link rel="stylesheet" href="style/ranking.css">
+</head>
+
+<body>
+    <div class="ranking-container">
+        <h1>
+            <span class="trophy">🏆</span> Ranking de Jugadores
+        </h1>
+        <p class="sub">¡Sólo los mejores llegan al podio!</p>
+
+        <input type="text" id="buscador" placeholder="🔎 Buscar jugador..." autocomplete="off">
+
+        <table id="ranking">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Score</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rellenado dinámicamente -->
+            </tbody>
+        </table>
+
+        <div class="volver">
+            <a href="index.html">Volver al inicio</a>
+        </div>
+    </div>
+
+    <script src="scripts/ranking.js"></script>
+    <script>
+        // Filtro en tiempo real del ranking
+        document.getElementById('buscador').addEventListener('input', function () {
+            let valor = this.value.toLowerCase();
+            document.querySelectorAll('#ranking tbody tr').forEach(row => {
+                let nombre = row.children[1].textContent.toLowerCase();
+                row.style.display = nombre.includes(valor) ? '' : 'none';
+            });
+        });
+    </script>
+</body>
+
+</html>

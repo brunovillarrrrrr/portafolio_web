@@ -1,0 +1,12 @@
+# robots.txt para el portafolio de Bruno Villarreal
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://kimal.tech/sitemap.xml
+
+# Desallow archivos de desarrollo
+Disallow: /node_modules/
+Disallow: /*.json$
+Disallow: /*.config.*$

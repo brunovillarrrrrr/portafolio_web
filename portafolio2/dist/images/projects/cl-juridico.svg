@@ -1,0 +1,85 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo degradado moderno -->
+  <defs>
+    <linearGradient id="bgLegal2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1f3a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f1419;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentLegal2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="800" height="600" fill="url(#bgLegal2)"/>
+
+  <!-- Patrón de fondo (líneas sutiles) -->
+  <line x1="0" y1="100" x2="800" y2="100" stroke="#1e293b" stroke-width="1" opacity="0.3"/>
+  <line x1="0" y1="200" x2="800" y2="200" stroke="#1e293b" stroke-width="1" opacity="0.3"/>
+  <line x1="0" y1="300" x2="800" y2="300" stroke="#1e293b" stroke-width="1" opacity="0.3"/>
+  <line x1="0" y1="400" x2="800" y2="400" stroke="#1e293b" stroke-width="1" opacity="0.3"/>
+  <line x1="0" y1="500" x2="800" y2="500" stroke="#1e293b" stroke-width="1" opacity="0.3"/>
+
+  <!-- Header moderno -->
+  <rect x="0" y="0" width="800" height="100" fill="#0a0e1a" opacity="0.9"/>
+
+  <!-- Logo CL -->
+  <g transform="translate(80, 50)">
+    <rect x="-30" y="-25" width="60" height="50" rx="8" fill="url(#accentLegal2)"/>
+    <text x="0" y="10" font-family="sans-serif" font-size="32" font-weight="bold" fill="white" text-anchor="middle">CL</text>
+  </g>
+
+  <!-- Menú de navegación -->
+  <g transform="translate(200, 50)">
+    <text x="0" y="0" font-family="sans-serif" font-size="14" fill="#94a3b8">Inicio</text>
+    <text x="100" y="0" font-family="sans-serif" font-size="14" fill="#94a3b8">Servicios</text>
+    <text x="220" y="0" font-family="sans-serif" font-size="14" fill="#94a3b8">Equipo</text>
+    <text x="340" y="0" font-family="sans-serif" font-size="14" fill="#94a3b8">Contacto</text>
+  </g>
+
+  <!-- Ícono de escudo (seguridad jurídica) -->
+  <g transform="translate(400, 250)">
+    <!-- Escudo -->
+    <path d="M 0 -80 L 50 -60 L 50 0 Q 50 40, 0 60 Q -50 40, -50 0 L -50 -60 Z" fill="url(#accentLegal2)" opacity="0.9"/>
+
+    <!-- Símbolo de checkmark -->
+    <path d="M -20 0 L -5 15 L 25 -20" stroke="white" stroke-width="6" stroke-linecap="round" fill="none"/>
+
+    <!-- Borde del escudo -->
+    <path d="M 0 -80 L 50 -60 L 50 0 Q 50 40, 0 60 Q -50 40, -50 0 L -50 -60 Z" stroke="#60a5fa" stroke-width="2" fill="none"/>
+  </g>
+
+  <!-- Título principal -->
+  <text x="400" y="400" font-family="sans-serif" font-size="42" font-weight="bold" fill="#f8fafc" text-anchor="middle">CL Jurídico</text>
+  <text x="400" y="440" font-family="sans-serif" font-size="20" fill="#94a3b8" text-anchor="middle">Derecho Corporativo y Empresarial</text>
+
+  <!-- Características -->
+  <g transform="translate(150, 490)">
+    <rect x="0" y="0" width="150" height="60" rx="8" fill="#1e293b" stroke="#3b82f6" stroke-width="2"/>
+    <text x="75" y="25" font-family="sans-serif" font-size="12" font-weight="bold" fill="#3b82f6" text-anchor="middle">Asesoría</text>
+    <text x="75" y="42" font-family="sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Corporativa</text>
+  </g>
+
+  <g transform="translate(325, 490)">
+    <rect x="0" y="0" width="150" height="60" rx="8" fill="#1e293b" stroke="#3b82f6" stroke-width="2"/>
+    <text x="75" y="25" font-family="sans-serif" font-size="12" font-weight="bold" fill="#3b82f6" text-anchor="middle">Litigios</text>
+    <text x="75" y="42" font-family="sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Mercantiles</text>
+  </g>
+
+  <g transform="translate(500, 490)">
+    <rect x="0" y="0" width="150" height="60" rx="8" fill="#1e293b" stroke="#3b82f6" stroke-width="2"/>
+    <text x="75" y="25" font-family="sans-serif" font-size="12" font-weight="bold" fill="#3b82f6" text-anchor="middle">Contratos</text>
+    <text x="75" y="42" font-family="sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Empresariales</text>
+  </g>
+
+  <!-- Elementos decorativos modernos -->
+  <circle cx="100" cy="150" r="4" fill="#3b82f6" opacity="0.4"/>
+  <circle cx="700" cy="180" r="3" fill="#3b82f6" opacity="0.5"/>
+  <circle cx="120" cy="450" r="3" fill="#3b82f6" opacity="0.3"/>
+  <circle cx="720" cy="380" r="4" fill="#3b82f6" opacity="0.4"/>
+
+  <!-- Líneas decorativas diagonales -->
+  <line x1="650" y1="120" x2="750" y2="180" stroke="#3b82f6" stroke-width="2" opacity="0.2"/>
+  <line x1="50" y1="350" x2="150" y2="420" stroke="#3b82f6" stroke-width="2" opacity="0.2"/>
+</svg>
