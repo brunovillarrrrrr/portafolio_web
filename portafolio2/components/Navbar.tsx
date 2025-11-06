@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { GithubIcon, LinkedinIcon } from './icons/SocialIcons';
+import { Link } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,6 +11,7 @@ const Navbar: React.FC = () => {
     { href: '#habilidades', label: 'Habilidades', id: 'habilidades' },
     { href: '#proyectos', label: 'Proyectos', id: 'proyectos' },
     { href: '#experiencia', label: 'Experiencia', id: 'experiencia' },
+    { href: '#blog', label: 'Blog', id: 'blog'},
     { href: '#contacto', label: 'Contacto', id: 'contacto' },
   ];
 
@@ -35,6 +37,10 @@ const Navbar: React.FC = () => {
       if (element) observer.observe(element);
     });
 
+    // Also observe the blog-admin section if it exists on the page
+    const blogAdminElement = document.getElementById('blog-admin');
+    if (blogAdminElement) observer.observe(blogAdminElement);
+
     return () => observer.disconnect();
   }, []);
 
@@ -42,9 +48,9 @@ const Navbar: React.FC = () => {
     <header className="sticky top-0 z-50 bg-[#0A192F]/80 backdrop-blur-sm">
       <nav className="container mx-auto px-6 md:px-10 lg:px-20 py-4">
         <div className="flex items-center justify-between">
-          <a href="#" className="text-2xl font-bold text-cyan-400 border-2 border-cyan-400 px-2 py-1 hover:bg-cyan-400 hover:text-[#0A192F] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-[#0A192F]">
+          <Link to="/" className="text-2xl font-bold text-cyan-400 border-2 border-cyan-400 px-2 py-1 hover:bg-cyan-400 hover:text-[#0A192F] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-[#0A192F]">
             BV
-          </a>
+          </Link>
           
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-6">
@@ -59,6 +65,14 @@ const Navbar: React.FC = () => {
                 <span className="text-cyan-400">0{index + 1}.</span> {link.label}
               </a>
             ))}
+            <Link
+              to="/blog-admin"
+              className={`text-slate-300 hover:text-cyan-400 transition-colors duration-300 focus:outline-none focus:text-cyan-400 ${
+                activeSection === 'blog-admin' ? 'text-cyan-400' : ''
+              }`}
+            >
+              Admin
+            </Link>
             <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="border border-cyan-400 text-cyan-400 px-4 py-2 rounded-md hover:bg-cyan-400 hover:text-[#0A192F] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-[#0A192F]">
               Resume
             </a>
@@ -94,6 +108,15 @@ const Navbar: React.FC = () => {
                   {link.label}
                 </a>
               ))}
+              <Link
+                to="/blog-admin"
+                onClick={() => setIsOpen(false)}
+                className={`text-slate-300 hover:text-cyan-400 transition-colors duration-300 text-lg focus:outline-none focus:text-cyan-400 ${
+                  activeSection === 'blog-admin' ? 'text-cyan-400' : ''
+                }`}
+              >
+                Admin
+              </Link>
               <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="border border-cyan-400 text-cyan-400 px-6 py-2 rounded-md hover:bg-cyan-400 hover:text-[#0A192F] transition-all duration-300">
                 Resume
               </a>
