@@ -3,13 +3,13 @@ import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAOptReH5gQ6s9cvO8d-3NZ5P29l2mKVEw",
-  authDomain: "portafolio-deffa.firebaseapp.com",
-  projectId: "portafolio-deffa",
-  storageBucket: "portafolio-deffa.firebasestorage.app",
-  messagingSenderId: "164887266919",
-  appId: "1:164887266919:web:b824e150b98c1edb1936c2",
-  measurementId: "G-67PSYH99R3"
+  apiKey: "AIzaSyDlikOkBoaGUmw3ypSlVusA_wlAl_elWY0",
+  authDomain: "gen-lang-client-0991060668.firebaseapp.com",
+  projectId: "gen-lang-client-0991060668",
+  storageBucket: "gen-lang-client-0991060668.firebasestorage.app",
+  messagingSenderId: "586440827130",
+  appId: "1:586440827130:web:b4beb7558488f13ade2943",
+  measurementId: "G-Q96S100FE1"
 };
 
 // Initialize Firebase

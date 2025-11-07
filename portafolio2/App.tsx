@@ -13,10 +13,12 @@ import ScrollToTop from './components/ScrollToTop';
 import CursorEffect from './components/CursorEffect';
 import SkipLink from './components/SkipLink';
 import BrunoAssistance from './components/BrunoAssistance';
-import { Blog } from './components/Blog';
+import BlogPage from './components/BlogPage';
+import BlogPostDetail from './components/BlogPostDetail';
 import Auth from './components/Auth';
-import BlogPage from './components/BlogPage'; // Import BlogPage
-import BlogPostDetail from './components/BlogPostDetail'; // Import BlogPostDetail
+import BlogAdminPanel from './components/BlogAdminPanel';
+import UserLogin from './components/UserLogin';
+import LatestBlogPost from './components/LatestBlogPost';
 
 const App: React.FC = () => {
   return (
@@ -34,13 +36,15 @@ const App: React.FC = () => {
                 <Skills />
                 <Projects />
                 <Experience />
-                <BlogPage /> {/* Render BlogPage here for the main section */} 
+                <LatestBlogPost />
                 <Contact />
               </>
             } />
-            <Route path="/blog-admin" element={<Auth />} />
+            <Route path="/login" element={<UserLogin />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/blog/:slug" element={<BlogPostDetail />} />
+            <Route path="/blog-admin" element={<Auth />} />
+            <Route path="/blog-admin/panel" element={<BlogAdminPanel />} />
           </Routes>
         </main>
         <Footer />

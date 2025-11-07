@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { GithubIcon, LinkedinIcon } from './icons/SocialIcons';
 
 const Footer: React.FC = () => {
@@ -37,7 +38,9 @@ const Footer: React.FC = () => {
 
         <div className="pt-8 border-t border-slate-800">
             <p className="text-sm mb-2">Diseñado y desarrollado con <span className="text-cyan-400 font-medium">React</span>, <span className="text-cyan-400 font-medium">TypeScript</span> & <span className="text-cyan-400 font-medium">Tailwind CSS</span></p>
-            <p className="text-xs text-slate-500">© {new Date().getFullYear()} Bruno Villarreal Leija. Todos los derechos reservados.</p>
+            <p className="text-xs text-slate-500">
+              © {new Date().getFullYear()} Bruno Villarreal Leija. Todos los derechos reservados. · <Link to="/blog-admin" className="text-slate-500 hover:text-slate-400 transition-colors">Admin</Link>
+            </p>
         </div>
       </div>
     </footer>

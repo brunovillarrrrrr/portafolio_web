@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { auth } from '../services/firebase-config';
 import { onAuthStateChanged, User } from 'firebase/auth';
+import { isAuthorizedAdmin } from '../config/adminConfig';
 import SectionTitle from './SectionTitle';
 import FadeIn from './FadeIn';
 import { addPost, getPosts, updatePost, deletePost, BlogPost } from '../services/firestore';
 import { Link } from 'react-router-dom';
+import UnauthorizedAccess from './UnauthorizedAccess';
 
 const BlogAdminPanel: React.FC = () => {
   const [user, setUser] = useState<User | null>(null);
@@ -133,7 +135,14 @@ const BlogAdminPanel: React.FC = () => {
   };
 
   if (loading) {
-    return <div className="text-center text-slate-400">Cargando panel de administración...</div>;
+    return (
+      <div className="min-h-[60vh] flex items-center justify-center">
+        <div className="text-center">
+          <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-cyan-400 mb-4"></div>
+          <p className="text-slate-400">Cargando panel de administración...</p>
+        </div>
+      </div>
+    );
   }
 
   if (!user) {
@@ -146,6 +155,11 @@ const BlogAdminPanel: React.FC = () => {
         </Link>
       </div>
     );
+  }
+
+  // Verificación adicional de seguridad: validar que el usuario esté autorizado
+  if (!isAuthorizedAdmin(user.email)) {
+    return <UnauthorizedAccess userEmail={user.email} onSignOut={handleLogout} />;
   }
 
   const currentFormData = editingPost || newPost;
